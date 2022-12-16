@@ -1,10 +1,22 @@
 import React from "react";
+// import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import Item from "./Components/Item";
 import Menu from "./Components/Menu";
 import bed from "./Assets/items_icons/Bed.png";
+import refridegator from "./Assets/items_icons/Refridegator.png";
 
 const App = () => {
+  // const totalFormItems = useSelector((state) => state.totalItems);
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   console.log("montado");
+  //   if (totalFormItems === 0) {
+  //     // dispatch(resetValues());
+  //   }
+  // }, [dispatch]);
+
   return (
     <div>
       <Menu />
@@ -17,6 +29,7 @@ const App = () => {
       </div>
       <section>
         <Item icon={bed} name={"Bed"} valueM2={1.2} />
+        <Item icon={refridegator} name={"Refridegator"} valueM2={1} />
       </section>
     </div>
   );

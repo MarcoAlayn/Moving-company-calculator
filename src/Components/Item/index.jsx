@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import React,{useState} from 'react'
-import { useDispatch } from 'react-redux';
-import { incrementValues, decrementValues } from '../../Redux/Actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { incrementValues, decrementValues, resetValues } from '../../Redux/Actions';
+
 
 const Item = ({icon,name,valueM2}) => {
+  const totalFormItems = useSelector((state) => state.totalItems); 
   const dispatch = useDispatch()
   const [count, setCount] = useState(0);
       
@@ -13,9 +15,14 @@ const Item = ({icon,name,valueM2}) => {
   };
 
   const decrement = () => {
-    if(count > 0)
-    setCount(count - 1);
+    if(count > 0){
+    setCount(count - 1);}
+
+    if(count !== 0)
     dispatch(decrementValues(valueM2))
+
+    if(totalFormItems <= 0)
+    dispatch(resetValues())
   };
   
    

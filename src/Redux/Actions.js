@@ -23,7 +23,7 @@ export const decrementValues = (value) => {
 export const resetValues = () => {
   return (dispatch) => {
     return dispatch({
-      type: DECREMENT_VALUES,
+      type: RESET_VALUES,
     });
   };
 };

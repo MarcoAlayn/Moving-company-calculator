@@ -14,33 +14,59 @@ const RootReducer = (state = initialState, action) => {
     case INCREMENT_VALUES:
       return {
         ...state,
-        totalItems: state.totalItems + 1,
-        totalM2: state.totalM2 + action.payload,
-        subTotal: state.subTotal + action.payload * 200,
-        tax: state.tax + action.payload * 200 * 0.16,
-        total: state.total + action.payload * 200 + action.payload * 200 * 0.16,
-        dueToday:
-          state.dueToday +
-          (action.payload * 200 + action.payload * 200 * 0.16) / 2,
+        totalItems: state.totalItems + 1, // Increment number of items selected in the form
+        totalM2: Number((state.totalM2 + action.payload).toFixed(2)), // Total m2 of selected items
+        subTotal: Number((state.subTotal + action.payload * 200).toFixed(2)), // 1m2 = $200
+        tax: Number((state.tax + action.payload * 200 * 0.16).toFixed(2)), // Tax is 16%
+        total: Number(
+          (
+            state.total +
+            action.payload * 200 +
+            action.payload * 200 * 0.16
+          ).toFixed(2)
+        ), // Total $
+        dueToday: Number(
+          (
+            state.dueToday +
+            (action.payload * 200 + action.payload * 200 * 0.16) / 2
+          ).toFixed(2)
+        ), // 50% of total
       };
 
     case DECREMENT_VALUES:
       return {
         ...state,
-        totalItems: state.totalItems > 0 ? state.totalItems - 1 : 0,
-        totalM2: state.totalItems > 0 ? state.totalM2 - action.payload : 0,
+        totalItems: state.totalItems > 0 ? state.totalItems - 1 : 0, // Decrement number of items selected in the form
+        totalM2:
+          state.totalItems > 0
+            ? Number((state.totalM2 - action.payload).toFixed(2))
+            : 0, // Decrement Total m2 of selected items
         subTotal:
-          state.totalItems > 0 ? state.subTotal - action.payload * 200 : 0,
-        tax: state.totalItems > 0 ? state.tax - action.payload * 200 * 0.16 : 0,
+          state.totalItems > 0
+            ? Number((state.subTotal - action.payload * 200).toFixed(2))
+            : 0, // 1m2 = -$200
+        tax:
+          state.totalItems > 0
+            ? Number((state.tax - action.payload * 200 * 0.16).toFixed(2))
+            : 0, // Tax is -16%
         total:
           state.total - action.payload * 200 - action.payload * 200 * 0.16 < 0
             ? 0
-            : state.total - action.payload * 200 - action.payload * 200 * 0.16,
-
+            : Number(
+                (
+                  state.total -
+                  action.payload * 200 -
+                  action.payload * 200 * 0.16
+                ).toFixed(2)
+              ), // Total $
         dueToday:
           state.totalItems > 0
-            ? state.dueToday -
-              (action.payload * 200 + action.payload * 200 * 0.16) / 2
+            ? Number(
+                (
+                  state.dueToday -
+                  (action.payload * 200 + action.payload * 200 * 0.16) / 2
+                ).toFixed(2)
+              ) // 50% of total
             : 0,
       };
 
