@@ -1,22 +1,20 @@
 import React from "react";
-// import { useDispatch, useSelector } from "react-redux";
+
 import "./App.css";
 import Item from "./Components/Item";
 import Menu from "./Components/Menu";
 import bed from "./Assets/items_icons/Bed.png";
 import refridegator from "./Assets/items_icons/Refridegator.png";
+import furniture from "./Assets/items_icons/Furniture.png";
+import oven from "./Assets/items_icons/Oven.png";
+import sofa from "./Assets/items_icons/Sofa.png";
+import tv from "./Assets/items_icons/TV.png";
+import washerDryer from "./Assets/items_icons/washer-dryer.png";
+import dining from "./Assets/items_icons/Dining.png";
+import desk from "./Assets/items_icons/Desk.png";
+import wardrobe from "./Assets/items_icons/Wardrobe.png";
 
 const App = () => {
-  // const totalFormItems = useSelector((state) => state.totalItems);
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   console.log("montado");
-  //   if (totalFormItems === 0) {
-  //     // dispatch(resetValues());
-  //   }
-  // }, [dispatch]);
-
   return (
     <div>
       <Menu />
@@ -30,6 +28,14 @@ const App = () => {
       <section>
         <Item icon={bed} name={"Bed"} valueM2={1.2} />
         <Item icon={refridegator} name={"Refridegator"} valueM2={1} />
+        <Item icon={furniture} name={"Furniture"} valueM2={0.5} />
+        <Item icon={oven} name={"Oven"} valueM2={0.6} />
+        <Item icon={sofa} name={"Sofa"} valueM2={1.5} />
+        <Item icon={tv} name={"TV"} valueM2={0.25} />
+        <Item icon={washerDryer} name={"Washer-dryer"} valueM2={0.5} />
+        <Item icon={dining} name={"Dining"} valueM2={2} />
+        <Item icon={desk} name={"Desk"} valueM2={0.75} />
+        <Item icon={wardrobe} name={"Wardrobe"} valueM2={3.2} />
       </section>
     </div>
   );
