@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import "./App.css";
 import Item from "./Components/Item";
 import Menu from "./Components/Menu";
+import Logo from "./Assets/Logo.png";
 import bed from "./Assets/items_icons/Bed.png";
 import refridegator from "./Assets/items_icons/Refridegator.png";
 import furniture from "./Assets/items_icons/Furniture.png";
@@ -15,13 +16,18 @@ import dining from "./Assets/items_icons/Dining.png";
 import desk from "./Assets/items_icons/Desk.png";
 import wardrobe from "./Assets/items_icons/Wardrobe.png";
 import Summary from "./Components/Summary";
+import Footer from "./Components/Footer";
+import imgTwitter from "./Assets/social_Icons/Twitter.png";
+import imgFacebook from "./Assets/social_Icons/Facebook.png";
+import imgInstagram from "./Assets/social_Icons/Instagram.png";
+import imgWhatsApp from "./Assets/social_Icons/WhatsApp.png";
 
 const App = () => {
   const dispatch = useDispatch();
 
   return (
     <div>
-      <Menu />
+      <Menu logo={Logo} />
       <div>
         <h1>What items to store?</h1>
         <p>
@@ -48,6 +54,16 @@ const App = () => {
       </div>
       <div>
         <Summary />
+      </div>
+
+      <div>
+        <Footer
+          logo={Logo}
+          imgTwitter={imgTwitter}
+          imgFacebook={imgFacebook}
+          imgInstagram={imgInstagram}
+          imgWhatsApp={imgWhatsApp}
+        />
       </div>
     </div>
   );

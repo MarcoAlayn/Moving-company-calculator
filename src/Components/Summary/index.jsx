@@ -15,10 +15,10 @@ const Summary = () => {
         <div>
             <div><p>Total Items</p><p>{totalItemsState}</p></div>
             <div><p>Total m²</p><p>{totalM2State}</p></div>
-            <div><p>Subtotal</p><p>{subTotalState}</p></div>
-            <div><p>Tax</p><p>{taxState}</p></div>
-            <div><p>Total</p><p>{totalState}</p></div>
-            <div><p>Due Today 50%</p><p>{dueTodayState}</p></div>
+            <div><p>Subtotal</p><p>${subTotalState}</p></div>
+            <div><p>Tax</p><p>${taxState}</p></div>
+            <div><p>Total</p><p>${totalState}</p></div>
+            <div><p>Due Today 50%</p><p>${dueTodayState}</p></div>
         </div>
     </div>
   )

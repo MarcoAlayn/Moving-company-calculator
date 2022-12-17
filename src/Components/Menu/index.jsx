@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import "./menu.css"
 
-const Menu = () => {
+const Menu = ({logo}) => {
   return (
     <header className="menu-container">
       <div className="menu-logo">
-        <img src="logo.png" alt="logo" />
+        <img src={logo} alt="logo" />
       </div>
       <nav className="menu-items">
         <a href="#">How We Work</a>

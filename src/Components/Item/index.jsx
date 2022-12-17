@@ -8,7 +8,7 @@ import { incrementValues, decrementValues } from '../../Redux/Actions';
 const Item = ({icon,name,valueM2, }) => {
   const dispatch = useDispatch()
   const [count, setCount] = useState(0);
-  const x = useSelector(state => state.itemCount)    
+  const itemCountState= useSelector(state => state.itemCount)    
 
   const increment = () => {
     setCount(count + 1);
@@ -25,15 +25,14 @@ const Item = ({icon,name,valueM2, }) => {
     dispatch(decrementValues(valueM2))
 
   };
-  const reset =() =>{
-    if(x !== "initCount")
+  const resetCount =() =>{
+    if(itemCountState !== "initCount")
     setCount(0)
   }
 
   useEffect(() => {
-    console.log('El estado ha cambiado', x);
-    reset()
-  }, [x]);
+    resetCount()
+  }, [dispatch,itemCountState]);
 
     return (
     <div>
