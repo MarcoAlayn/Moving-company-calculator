@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
-import React,{useState} from 'react'
-import { useDispatch } from 'react-redux';
+import React,{ useState, useEffect} from 'react'
+import { useDispatch, useSelector,  } from 'react-redux';
 import { incrementValues, decrementValues } from '../../Redux/Actions';
 
 
-const Item = ({icon,name,valueM2}) => {
+
+const Item = ({icon,name,valueM2, }) => {
   const dispatch = useDispatch()
   const [count, setCount] = useState(0);
-      
+  const x = useSelector(state => state.itemCount)    
+
   const increment = () => {
     setCount(count + 1);
     dispatch(incrementValues(valueM2))
@@ -23,8 +25,16 @@ const Item = ({icon,name,valueM2}) => {
     dispatch(decrementValues(valueM2))
 
   };
-  
-   
+  const reset =() =>{
+    if(x !== "initCount")
+    setCount(0)
+  }
+
+  useEffect(() => {
+    console.log('El estado ha cambiado', x);
+    reset()
+  }, [x]);
+
     return (
     <div>
         <div>

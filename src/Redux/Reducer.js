@@ -7,6 +7,7 @@ const initialState = {
   tax: 0,
   total: 0,
   dueToday: 0,
+  itemCount: 1,
 };
 
 const RootReducer = (state = initialState, action) => {
@@ -31,6 +32,7 @@ const RootReducer = (state = initialState, action) => {
             (action.payload * 200 + action.payload * 200 * 0.16) / 2
           ).toFixed(2)
         ), // 50% of total
+        itemCount: "initCount",
       };
 
     case DECREMENT_VALUES:
@@ -68,6 +70,7 @@ const RootReducer = (state = initialState, action) => {
                 ).toFixed(2)
               ) // 50% of total
             : 0,
+        itemCount: "initCount",
       };
 
     case RESET_VALUES:
@@ -79,6 +82,7 @@ const RootReducer = (state = initialState, action) => {
         tax: 0,
         total: 0,
         dueToday: 0,
+        itemCount: "resetCount",
       };
     default:
       return state;

@@ -1,5 +1,6 @@
 import React from "react";
-
+import { resetValues } from "./Redux/Actions";
+import { useDispatch } from "react-redux";
 import "./App.css";
 import Item from "./Components/Item";
 import Menu from "./Components/Menu";
@@ -13,8 +14,11 @@ import washerDryer from "./Assets/items_icons/washer-dryer.png";
 import dining from "./Assets/items_icons/Dining.png";
 import desk from "./Assets/items_icons/Desk.png";
 import wardrobe from "./Assets/items_icons/Wardrobe.png";
+import Summary from "./Components/Summary";
 
 const App = () => {
+  const dispatch = useDispatch();
+
   return (
     <div>
       <Menu />
@@ -37,6 +41,14 @@ const App = () => {
         <Item icon={desk} name={"Desk"} valueM2={0.75} />
         <Item icon={wardrobe} name={"Wardrobe"} valueM2={3.2} />
       </section>
+
+      <div>
+        <button onClick={() => dispatch(resetValues())}>Clear</button>
+        <button>Calculate</button>
+      </div>
+      <div>
+        <Summary />
+      </div>
     </div>
   );
 };
