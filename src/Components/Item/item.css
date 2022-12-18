@@ -1,0 +1,45 @@
+.item-container {
+  text-align: center;
+  /* background: violet; */
+}
+
+/* .item-container .description-container {
+  max-width: 220.24px;
+  
+} */
+
+.item-container .description-container img {
+  margin: 0 auto;
+  transform: scale(70%);
+  object-fit: contain;
+}
+
+.item-container .description-container span {
+  color: #222222;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.counter-container {
+  /* max-width: 220.24px; */
+  max-height: 30px;
+  border: 1px solid #e2e2e2;
+}
+
+.item-container .counter-container {
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.item-container .counter-container button {
+  width: 25px;
+  height: 30px;
+  background: #e2e2e2;
+  border: none;
+  border-radius: 5px;
+}

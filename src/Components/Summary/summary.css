@@ -1,0 +1,36 @@
+.summary-container {
+  text-align: center;
+}
+
+.summary-container h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+/* .summary-container .values-container {
+} */
+
+.summary-container .values-container .tag-container {
+  color: #222222;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* tag
+.summary-container .values-container .tag-container :first-child {
+}
+
+/* number 
+.summary-container .values-container .tag-container :last-child {
+} */
+
+.text-bold {
+  font-weight: 500;
+}
+
+.text-bolder {
+  font-weight: 700;
+}

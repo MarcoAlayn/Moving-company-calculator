@@ -26,17 +26,17 @@ const App = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="main-container">
       <Menu logo={Logo} />
-      <div>
+      <div className="main-text">
         <h1>What items to store?</h1>
         <p>
-          Select which items you wish to store before moving to your new home.
-          We’ll keep ’em safe!
+          Select which items you wish to store before moving to <br /> your new
+          home. We’ll keep ’em safe!
         </p>
       </div>
       <section>
-        <Item icon={bed} name={"Bed"} valueM2={1.2} />
+        <Item icon={bed} name={"Beds"} valueM2={1.2} />
         <Item icon={refridegator} name={"Refridegator"} valueM2={1} />
         <Item icon={furniture} name={"Furniture"} valueM2={0.5} />
         <Item icon={oven} name={"Oven"} valueM2={0.6} />
@@ -48,7 +48,7 @@ const App = () => {
         <Item icon={wardrobe} name={"Wardrobe"} valueM2={3.2} />
       </section>
 
-      <div>
+      <div className="buttons-container">
         <button onClick={() => dispatch(resetValues())}>Clear</button>
         <button>Calculate</button>
       </div>
