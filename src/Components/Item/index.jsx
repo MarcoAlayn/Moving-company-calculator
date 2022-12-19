@@ -6,6 +6,11 @@ import "./item.css";
 import subtract from "../../Assets/counter_icons/subtract.svg"
 import add from "../../Assets/counter_icons/add.svg"
 
+//  Item component displays a list item with a counter that can be used to increment or decrement the item's value.
+//  The component also allows users to track their total value of the items they are selecting. 
+//  The component uses the Redux store to manage the state of the items, 
+//  and dispatches actions to increment and decrement the item's value.
+
 const Item = ({ icon, name, valueM2 }) => {
   const dispatch = useDispatch();
   const [count, setCount] = useState(0);

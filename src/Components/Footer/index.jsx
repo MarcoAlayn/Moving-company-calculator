@@ -2,6 +2,10 @@
 import React from 'react'
 import "./footer.css"
 
+// The Footer component displays a footer with a logo, social media icons, and contact information.
+// It includes a logo, links to About Us and Navigate sections, contact information, and a WhatsApp icon. 
+// The component also includes a text-center class to center the social media icons.
+
 const Footer = ({logo,imgTwitter,imgFacebook,imgInstagram, imgWhatsApp }) => {
   return (
     <div className='footer-container'>

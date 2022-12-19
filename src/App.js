@@ -2,8 +2,12 @@ import React from "react";
 import { resetValues } from "./Redux/Actions";
 import { useDispatch } from "react-redux";
 import "./App.css";
+// ↓ components ↓
 import Item from "./Components/Item";
 import Menu from "./Components/Menu";
+import Summary from "./Components/Summary";
+import Footer from "./Components/Footer";
+// ↓ images & icons ↓
 import iconMenu from "./Assets/menu.png";
 import Logo from "./Assets/Logo.png";
 import bed from "./Assets/items_icons/Bed.png";
@@ -16,12 +20,16 @@ import washerDryer from "./Assets/items_icons/washer-dryer.png";
 import dining from "./Assets/items_icons/Dining.png";
 import desk from "./Assets/items_icons/Desk.png";
 import wardrobe from "./Assets/items_icons/Wardrobe.png";
-import Summary from "./Components/Summary";
-import Footer from "./Components/Footer";
 import imgTwitter from "./Assets/social_Icons/Twitter.png";
 import imgFacebook from "./Assets/social_Icons/Facebook.png";
 import imgInstagram from "./Assets/social_Icons/Instagram.png";
 import imgWhatsApp from "./Assets/social_Icons/WhatsApp.png";
+
+// The App component is the main component of the application.
+// It renders the menu, the items list, the buttons to clear and calculate the values,
+// the Summary component to show the total amount of items and their associated
+// values and the Footer component with links to social media.
+// It also dispatches the resetValues action when the clear button is clicked.
 
 const App = () => {
   const dispatch = useDispatch();

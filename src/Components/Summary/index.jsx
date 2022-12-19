@@ -2,6 +2,10 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import "./summary.css"
 
+// Summary is a component that displays a summary of purchase expenses.
+//  It shows the number of items, the number of square meters, the sub-total, taxes,
+//   total and the initial payment that must be made today.
+
 const Summary = () => {
     const totalItemsState = useSelector(state => state.totalItems)
     const totalM2State = useSelector(state => state.totalM2)

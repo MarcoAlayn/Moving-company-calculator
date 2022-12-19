@@ -2,6 +2,10 @@
 import React from 'react'
 import "./menu.css"
 
+//  Menu is a React component that renders a header with a logo and a navigation bar. 
+//  The component accepts two props which are the logo image and the menu image.
+//  It also contains links to the different pages of the website.
+
 const Menu = ({logo, menu}) => {
   return (
     <header className="menu-container">

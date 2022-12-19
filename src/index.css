@@ -1,14 +1,26 @@
-/* Pantallas de escritorio */
-@media (min-width: 1024px) {
-  /* Estilos para pantallas de escritorio */
+/* Global Styles */
+
+/* Theme */
+:root {
+  --color-primary: #fd9255;
+  --color-gray: #666666;
+  --color-gray-soft: #e2e2e2;
+  --color-white: rgb(255, 255, 255);
+  --color-black: #06170b;
+  --color-background: #ffffff;
 }
 
-/* Pantallas tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* Estilos para pantallas tablet */
+/* Fonts */
+:root {
+  --font-family-Primary: "Poppins", sans-serif;
+  --font-family-Secondary: "Roboto", sans-serif;
 }
 
-/* Pantallas móviles */
-@media (max-width: 767px) {
-  /* Estilos para pantallas móviles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-Primary);
+  background-color: var(--color-background);
+  color: var(--color-black);
+  font-size-adjust: 0.4;
 }
