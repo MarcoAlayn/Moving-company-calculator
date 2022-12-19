@@ -13,7 +13,7 @@ const Summary = () => {
   return (
     <div className='summary-container'>
         <h2>Summary</h2>
-        <div className='values-container text-bold'>
+        <div className='tags-container values-container text-bold'>
             <div className='tag-container text-bold'><p>Total Items</p><p>{totalItemsState}</p></div>
             <div className='tag-container text-bold'><p>Total m²</p><p>{totalM2State}</p></div>
             <div className='tag-container text-bold'><p>Subtotal</p><p>${subTotalState}</p></div>

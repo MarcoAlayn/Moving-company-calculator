@@ -37,8 +37,10 @@ const Item = ({ icon, name, valueM2 }) => {
     <div className="item-container">
       <div className="description-container">
         <img src={icon} alt={name} />
-        <br />
+        <div className="item-text">
+
         <span>{name}</span>
+        </div>
       </div>
 
       <div className="counter-container">

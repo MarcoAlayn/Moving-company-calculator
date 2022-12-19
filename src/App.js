@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import "./App.css";
 import Item from "./Components/Item";
 import Menu from "./Components/Menu";
+import iconMenu from "./Assets/menu.png";
 import Logo from "./Assets/Logo.png";
 import bed from "./Assets/items_icons/Bed.png";
 import refridegator from "./Assets/items_icons/Refridegator.png";
@@ -27,7 +28,7 @@ const App = () => {
 
   return (
     <div className="main-container">
-      <Menu logo={Logo} />
+      <Menu logo={Logo} menu={iconMenu} />
       <div className="main-text">
         <h1>What items to store?</h1>
         <p>
@@ -35,7 +36,7 @@ const App = () => {
           home. We’ll keep ’em safe!
         </p>
       </div>
-      <section>
+      <section className="items-container">
         <Item icon={bed} name={"Beds"} valueM2={1.2} />
         <Item icon={refridegator} name={"Refridegator"} valueM2={1} />
         <Item icon={furniture} name={"Furniture"} valueM2={0.5} />

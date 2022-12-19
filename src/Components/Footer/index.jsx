@@ -5,8 +5,9 @@ import "./footer.css"
 const Footer = ({logo,imgTwitter,imgFacebook,imgInstagram, imgWhatsApp }) => {
   return (
     <div className='footer-container'>
-        <div className='sub-container'>
-            <div className='footer-logo'>
+        
+        <div className='sub-container large-text'>
+            <div className='footer-logo '>
             <img src={logo} alt="logo" />
             </div>
             <span>It is a long established
@@ -41,7 +42,7 @@ const Footer = ({logo,imgTwitter,imgFacebook,imgInstagram, imgWhatsApp }) => {
            <br />
             <a href="#">Free Quote</a>
         </div>
-        <div className='sub-container'>
+        <div className='whatsapp-logo-container sub-container'>
             <p>Contact Us</p>
             <span>Ricardo Margain 444</span>
             <br />

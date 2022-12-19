@@ -2,7 +2,7 @@
 import React from 'react'
 import "./menu.css"
 
-const Menu = ({logo}) => {
+const Menu = ({logo, menu}) => {
   return (
     <header className="menu-container">
       <div className="menu-logo">
@@ -14,7 +14,9 @@ const Menu = ({logo}) => {
         <a href="#">Free Quote</a>
         <a href="#">Contact</a>
       </nav>
-      <button className="menu-button">Menu</button>
+      <div className="menu-button">
+        <img src={menu} alt="menu" />
+        </div>
     </header>
   );
 };
