@@ -51,7 +51,7 @@ const App = () => {
         <Item icon={oven} name={"Oven"} valueM2={0.6} />
         <Item icon={sofa} name={"Sofa"} valueM2={1.5} />
         <Item icon={tv} name={"TV"} valueM2={0.25} />
-        <Item icon={washerDryer} name={"Washer-dryer"} valueM2={0.5} />
+        <Item icon={washerDryer} name={"Washer"} valueM2={0.5} />
         <Item icon={dining} name={"Dining"} valueM2={2} />
         <Item icon={desk} name={"Desk"} valueM2={0.75} />
         <Item icon={wardrobe} name={"Wardrobe"} valueM2={3.2} />

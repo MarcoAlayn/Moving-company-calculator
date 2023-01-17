@@ -30,6 +30,9 @@
   min-width: 103px;
   align-items: center;
   transform: translateX(-7px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item-container .counter-container {
